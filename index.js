@@ -29,7 +29,7 @@ app.get('/*', function(req, res){
   res.sendFile(path.join(__dirname, 'public/index.html'));
 })
 
-app.use('/api', require('./controllers/appointment/'));
+app.use('/api', require('./controllers/api/appointment/'));
 
 var server = app.listen(process.env.PORT || 3000);
 
