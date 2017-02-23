@@ -29,6 +29,10 @@ angular.module('DoggyApp',['ui.router', 'ngResource', 'ngMaterial'])
     url: '/schedule',
     component: 'scheduleComp'
   })
+  .state('admin', {
+    url: '/admin',
+    component: 'adminComp'
+  })
 
 
   // // Removes # symbol for our routes

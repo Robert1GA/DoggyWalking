@@ -14,6 +14,7 @@ angular.module('DoggyApp')
           console.log('couldnot create user', res.data.message);
           return false;
         }
+        console.log(res);
         return res.data;
       }, function error(res) {
         console.log('error response:', res);
@@ -29,7 +30,7 @@ angular.module('DoggyApp')
         Auth.saveToken(res.data.token);
         // Alerts.add('success', 'Logged in!');
         Alerts.add('success', ' ');
-        return res.data.user;
+        console.log(params);
       })
     },
     deleteUser: function() {

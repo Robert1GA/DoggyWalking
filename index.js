@@ -24,8 +24,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/doggywalk');
 var User = require('./models/user');
 
 
-
-
 // decode POST data in JSON and URL encoded formats //
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -47,7 +45,7 @@ app.use(function (err, req, res, next) {  // middleware to check if expressJWT a
 });
 // POST /api/auth - if authenticated, return a signed JWT
 app.post('/api/auth', function(req, res) {
-  User.findOne({ name: req.body.email }, function(err, user) {
+  User.findOne({ email: req.body.email }, function(err, user) {
     // return 401 if error or no user
     if (err || !user) return res.status(401).send({ message: 'User not found' });
 
