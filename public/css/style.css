@@ -41,6 +41,118 @@
   -o-background-size: cover;
   background-size: cover;
 }
+.social-item {
+	width: 72px;
+	height: 72px;
+	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+	position: relative;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	cursor: default;
+}
+
+.social-item:hover .social-info-wrap {
+	box-shadow:
+		0 0 0 0 rgba(0,0,0,0.8),
+		inset 0 0 3px rgba(115,114, 23, 0.8);
+}
+
+.social-item:hover .social-info {
+	-webkit-transform: rotate3d(0,1,0,-180deg);
+	-moz-transform: rotate3d(0,1,0,-180deg);
+	-o-transform: rotate3d(0,1,0,-180deg);
+	-ms-transform: rotate3d(0,1,0,-180deg);
+	transform: rotate3d(0,1,0,-180deg);
+}
+
+.social-info-wrap{
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	-ms-perspective: 800px;
+	perspective: 800px;
+
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+
+	box-shadow:
+		0 0 0 5px #f6f6f6,
+		inset 0 0 3px rgba(115,114, 23, 0.8);
+
+}
+
+.social-info{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	-webkit-border-radius: 50em;
+	-moz-border-radius: 50em;
+	border-radius: 50em;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+}
+
+.social-info > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center center;
+	border: 1px solid #999;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.social-info .social-info-back {
+	-webkit-transform: rotate3d(0,1,0,180deg);
+	-moz-transform: rotate3d(0,1,0,180deg);
+	-o-transform: rotate3d(0,1,0,180deg);
+	-ms-transform: rotate3d(0,1,0,180deg);
+	transform: rotate3d(0,1,0,180deg);
+	margin-left: -2px;
+}
+
+.social-info .social-info-back {
+	-webkit-transform: rotate3d(0,1,0,180deg);
+	-moz-transform: rotate3d(0,1,0,180deg);
+	-o-transform: rotate3d(0,1,0,180deg);
+	-ms-transform: rotate3d(0,1,0,180deg);
+	transform: rotate3d(0,1,0,180deg);
+	margin-left: -2px;
+}
+
+.social-twitter {
+	background: #f6f6f6 url('../img/twitter_grey.png') no-repeat;
+}
+
+.social-twitter-hover {
+	background: #48c4d2 url('../img/twitter_white.png') no-repeat;
+}
 
 
 /*!
@@ -60,7 +172,7 @@
 =================================================================== */
 @import url("icons.css");				/* Icons. */
 @import url("icons-color.css");			/* Icons. */
-@import url("social-icons.css");		/* Social Icons */
+@import url("./social-icons.css");		/* Social Icons */
 @import url("hover.css");				/* Hover CSS3 Effect */
 @import url("parallax-slider.css");		/* Parallax Slider */
 
