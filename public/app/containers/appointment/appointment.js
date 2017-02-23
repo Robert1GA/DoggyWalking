@@ -24,7 +24,7 @@ class MainController {
         mm='0'+mm
     }
     // Create date and slots array
-    this.days = [{dd:dd,mm:mm,yyyy:yyyy},{dd:dd+1,mm:mm,yyyy:yyyy},{dd:dd+2,mm:mm,yyyy:yyyy},{dd:dd+3,mm:mm,yyyy:yyyy},{dd:dd+4,mm:mm,yyyy:yyyy}];
+    this.days = [{dd:dd,mm:mm,yyyy:yyyy},{dd:dd+1,mm:mm,yyyy:yyyy},{dd:dd+2,mm:mm,yyyy:yyyy},{dd:dd+3,mm:mm,yyyy:yyyy}];
     this.slots= [{h:'10',m:'00'},{h:'10',m:'30'},{h:'11',m:'00'},{h:'11',m:'30'},{h:'13',m:'00'},{h:'13',m:'30'},{h:'14',m:'00'},{h:'14',m:'30'},{h:'15',m:'00'},{h:'15',m:'30'},{h:'16',m:'00'},{h:'16',m:'30'}];
   }
 
@@ -110,9 +110,9 @@ return a;
     switch(_d) {
       case 1:       bg = 'green';       break;
       case 2:       bg = 'darkBlue';    break;
-      case 3:       bg = 'blue';        break;
+      case 3:       bg = 'forestGreen';   break;
       case 4:       bg = 'yellow';      break;
-      case 5:       bg = 'pink';        break;
+      case 5:       bg = 'red';        break;
       case 6:       bg = 'darkBlue';    break;
       case 7:       bg = 'purple';      break;
       case 8:       bg = 'deepBlue';    break;
@@ -121,7 +121,7 @@ return a;
       default:      bg = 'yellow';      break;
     }
 
-    return bg;
+    // return bg;
   }
 }
 

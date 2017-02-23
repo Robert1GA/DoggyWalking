@@ -13,6 +13,14 @@ angular.module('DoggyApp',['ui.router', 'ngResource', 'ngMaterial'])
     url: '/',
     component: 'homeComp'
   })
+  .state('login', {
+    url: '/login',
+    component: 'loginComp'
+  })
+  .state('signup', {
+    url: '/signup',
+    component: 'signupComp'
+  })
   .state('appointment', {
     // url: '/appointment',
     component: 'appointmentComp'

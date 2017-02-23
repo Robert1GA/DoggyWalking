@@ -1,4 +1,4 @@
-angular.module('ChatApp')
+angular.module('DoggyApp')
 .component('loginComp', {
   templateUrl: 'app/containers/login/login.html',
   controller: LoginCompCtrl,
@@ -7,7 +7,7 @@ angular.module('ChatApp')
 
 function LoginCompCtrl($scope, $state, UserService, Alerts) {
   $scope.user = {
-    name: '',
+    email: '',
     password: ''
   };
 

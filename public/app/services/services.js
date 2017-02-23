@@ -32,14 +32,6 @@ angular.module('DoggyApp')
         return res.data.user;
       })
     },
-    getColors: function() {
-      var URL = '/api/users/' + Auth.currentUser().id;
-      var req = {
-        url: URL,
-        method: 'GET'
-      }
-      return $http(req);
-    },
     deleteUser: function() {
       var URL = '/api/users/' + Auth.currentUser().id;
       var req = {
@@ -54,13 +46,13 @@ angular.module('DoggyApp')
 .factory('Auth', ['$window', function($window) {
   return {
     saveToken: function(token) {
-      $window.localStorage['chatapp-token'] = token;
+      $window.localStorage['app-token'] = token;
     },
     getToken: function() {
-      return $window.localStorage['chatapp-token'];
+      return $window.localStorage['app-token'];
     },
     removeToken: function() {
-      $window.localStorage.removeItem('chatapp-token');
+      $window.localStorage.removeItem('app-token');
     },
     isLoggedIn: function() {
       var token = this.getToken();
