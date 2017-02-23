@@ -4,43 +4,41 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Working Title</title>
     <base href="/">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="/css/angular-material.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-resource.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.js"></script>
-    <script type="text/javascript" src="js/plugins/angular-animate.min.js"></script>
-    <script type="text/javascript" src="js/plugins/angular-aria.min.js"></script>
-    <script type="text/javascript" src="js/plugins/angular-material.min.js"></script>
-    <script type="text/javascript" src="js/plugins/lodash.js"></script>
-    <script type="text/javascript" src="js/plugins/moment.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
+
     <script src="app/app.js"></script>
     <script src="app/containers/home/home.js"></script>
-    <script src="app/controllers/navbar.js"></script>
-    <script src="app/controllers/alerts.js"></script>
-    <script src="app/services/services.js"></script>
+    <script src="app/containers/appointment/appointment.js"></script>
+    <!-- <script src="app/controllers/navbar.js"></script> -->
+    <!-- <script src="app/controllers/alerts.js"></script> -->
+    <!-- <script src="app/services/services.js"></script> -->
 
   </head>
   <body ng-app="DoggyApp" layout="column">
-
     <md-toolbar layout="column" class="md-whiteframe-z2">
       <div class="md-toolbar-tools">
         <h3><a ui-sref="/">Appointments</a></h3>
         <span flex></span>
-        <md-menu-content></md-menu-content>
+        <!-- </md-menu-content> -->
       </div>
     </md-toolbar>
-    <main></main>
+        <appointment-Comp></appointment-Comp>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-  </body>
+    </body>
+  <script type="text/javascript" src="js/plugins/angular-animate.min.js"></script>
+  <script type="text/javascript" src="js/plugins/angular-aria.min.js"></script>
+  <script type="text/javascript" src="js/plugins/angular-material.min.js"></script>
+  <script type="text/javascript" src="js/plugins/lodash.js"></script>
+  <script type="text/javascript" src="js/plugins/moment.js"></script>
 </html>

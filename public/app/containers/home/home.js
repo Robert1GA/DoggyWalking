@@ -5,9 +5,12 @@ angular.module('DoggyApp')
   controllerAs: 'homeComp'
 });
 
-function HomeCompCtrl(Auth, UserService) {
+function HomeCompCtrl() {
   var homeComp = this;
 
 }
 
-HomeCompCtrl.$inject = ['Auth', 'UserService'];
+HomeCompCtrl.$inject = [];
+
+// Auth, UserService
+// 'Auth', 'UserService'

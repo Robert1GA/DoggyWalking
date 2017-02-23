@@ -8,6 +8,7 @@ var appointmentSchema = new mongoose.Schema({
   date: Date,
   name: String,
   phone: String,
+  address: String,
   status: Boolean
 });
 

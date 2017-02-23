@@ -13,6 +13,10 @@ angular.module('DoggyApp',['ui.router', 'ngResource', 'ngMaterial'])
     url: '/',
     component: 'homeComp'
   })
+  .state('appointment', {
+    // url: '/appointment',
+    component: 'appointmentComp'
+  })
 
 
   // // Removes # symbol for our routes
