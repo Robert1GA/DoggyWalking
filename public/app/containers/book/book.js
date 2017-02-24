@@ -7,8 +7,8 @@ angular.module('DoggyApp')
 
 function BookCompCtrl(Auth, UserService) {
   var bookComp = this;
-  bookComp.username = Auth.currentUser().name;
-  
+  bookComp.username = Auth.currentUser().email;
+
 
 }
 
