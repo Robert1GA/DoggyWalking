@@ -109,19 +109,19 @@ return a;
 
     switch(_d) {
       case 1:       bg = 'green';       break;
-      case 2:       bg = 'darkBlue';    break;
-      case 3:       bg = 'forestGreen';   break;
-      case 4:       bg = 'yellow';      break;
-      case 5:       bg = 'red';        break;
+      case 2:       bg = 'deepBlue';    break;
+      case 3:       bg = 'forestGreen'; break;
+      case 4:       bg = 'lightGreen';      break;
+      case 5:       bg = 'bluish';      break;
       case 6:       bg = 'darkBlue';    break;
       case 7:       bg = 'purple';      break;
       case 8:       bg = 'deepBlue';    break;
-      case 9:       bg = 'lightPurple'; break;
-      case 10:      bg = 'red';         break;
-      default:      bg = 'yellow';      break;
+      case 9:       bg = 'blue';        break;
+      case 10:      bg = 'yellow';  break;
+      default:      bg = 'forestGreen';      break;
     }
 
-    // return bg;
+    return bg;
   }
 }
 

@@ -1,22 +1,29 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" ui-sref="home()"><img id="logo" src="img/doggy.png" /></a>
+<header ng-controller="NavCtrl">
+  <div>
+    <div>
+      <div>
+        <!-- <a class="brand" ui-sref="home()"><img id="logo" src="img/doggy.png" /></a> -->
+      </div>
+      <div>
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a ui-sref="login()" ng-hide="Auth.isLoggedIn()">Login</a></li>
+                <li><a ui-sref="signup()" ng-hide="Auth.isLoggedIn()">Signup</a></li>
+                <li><a ui-sref="#">Book Me!</a></li>
+                <li><a href ng-click="logout()" ng-show="Auth.isLoggedIn()">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav navbar-right">
-      <li><a ui-sref="signup()" ng-hide="Auth.isLoggedIn()">Signup</a></li>
-      <li><a ui-sref="login()" ng-hide="Auth.isLoggedIn()">Login</a></li>
-      <li><a ui-sref="profile()" ng-show="Auth.isLoggedIn()"></a></li>
-      <li><a ui-sref="profile()" ng-show="Auth.isLoggedIn()">Profile</a></li>
-      <li><a href ng-click="logout()" ng-show="Auth.isLoggedIn()">Logout</a></li>
-    </ul>
-  </div>
-</nav>
-
- <!-- ng-controller="NavCtrl"
+</header>

@@ -17,7 +17,9 @@ router.route('/')
       if (user) return res.status(400).send({ message: 'Username already exists' });
       User.create(req.body, function(err, user) {
         if (err) return res.status(500).send(err);
-        return res.send(user);
+
+        var token = jwt.sign(user.toJSON(), secret);
+        return res.send({ user: user, token: token });
       });
     });
   });

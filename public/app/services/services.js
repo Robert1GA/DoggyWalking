@@ -15,6 +15,7 @@ angular.module('DoggyApp')
           return false;
         }
         console.log(res);
+        Auth.saveToken(res.data.token);
         return res.data;
       }, function error(res) {
         console.log('error response:', res);

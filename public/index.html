@@ -12,10 +12,11 @@
     <link rel="shortcut icon" href="/img/paw2.jpg">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/angular-material.min.css">
-
+    <!-- <link rel="stylesheet" href="/css/angular-material.min.css"> -->
+    <link rel="stylesheet" href="/css/style2.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 
     <!-- FONTS -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
@@ -34,7 +35,7 @@
     <script src="app/containers/home/home.js"></script>
     <script src="app/containers/appointment/appointment.js"></script>
     <script src="app/containers/schedule/schedule.js"></script>
-    <!-- <script src="app/controllers/navbar.js"></script> -->
+    <script src="app/controllers/navbar.js"></script>
     <!-- <script src="app/controllers/alerts.js"></script> -->
     <script src="app/containers/signup/signup.js"></script>
     <script src="app/containers/login/login.js"></script>
@@ -42,8 +43,12 @@
     <script src="app/services/services.js"></script>
 
   </head>
-  <body ng-app="DoggyApp" layout="column">
+  <body ng-app="DoggyApp">
+
     <div ng-include="'app/containers/navbar/navbar.html'"></div>
+    <div class="clear"></div>
+    <!--  layout="column" -->
+
     <!-- <md-toolbar layout="column" class="md-whiteframe-z2">
       <div class="md-toolbar-tools">
         <h3><a ui-sref="/">Appointments</a></h3>
