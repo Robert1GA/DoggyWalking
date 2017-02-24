@@ -5,7 +5,7 @@ angular.module('DoggyApp')
   controllerAs: 'loginComp'
 });
 
-function LoginCompCtrl($scope, $state, UserService, Alerts) {
+function LoginCompCtrl($scope, $state, UserService) {
   $scope.user = {
     email: '',
     password: ''
@@ -21,4 +21,4 @@ function LoginCompCtrl($scope, $state, UserService, Alerts) {
   };
 }
 
-LoginCompCtrl.$inject = ['$scope', '$state', 'UserService', 'Alerts'];
+LoginCompCtrl.$inject = ['$scope', '$state', 'UserService'];

@@ -5,7 +5,7 @@ angular.module('DoggyApp',['ui.router', 'ngResource', 'ngMaterial'])
   $urlRouterProvider.otherwise('/');
 
   // Between routes to check auth
-  //$httpProvider.interceptors.push('AuthInterceptor');
+  $httpProvider.interceptors.push('AuthInterceptor');
 
   //Setup states (aka routes)
   $stateProvider

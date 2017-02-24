@@ -1,6 +1,10 @@
 var express = require('express');
 var User = require('../models/user');
 var router = express.Router();
+var expressJWT = require('express-jwt');
+var jwt = require('jsonwebtoken');
+var secret = process.env.JWT_SECRET;
+
 
 router.route('/')
   .get(function(req, res) {
@@ -17,7 +21,7 @@ router.route('/')
       if (user) return res.status(400).send({ message: 'Username already exists' });
       User.create(req.body, function(err, user) {
         if (err) return res.status(500).send(err);
-
+        console.log('CREATED USER HERE')
         var token = jwt.sign(user.toJSON(), secret);
         return res.send({ user: user, token: token });
       });

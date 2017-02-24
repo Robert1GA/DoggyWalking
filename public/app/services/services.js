@@ -1,6 +1,6 @@
 angular.module('DoggyApp')
 
-.factory('UserService', ['$http', 'Auth', 'Alerts', function($http, Auth, Alerts) {
+.factory('UserService', ['$http', 'Auth', function($http, Auth) {
   return {
     createAccount: function(params) {
       var URL = '/api/users';
@@ -29,8 +29,6 @@ angular.module('DoggyApp')
       }
       return $http(req).then(function(res) {
         Auth.saveToken(res.data.token);
-        // Alerts.add('success', 'Logged in!');
-        Alerts.add('success', ' ');
         console.log(params);
       })
     },
@@ -70,25 +68,6 @@ angular.module('DoggyApp')
           return false;
         }
       }
-    }
-  }
-}])
-.factory('Alerts', [function() {
-  var alerts = [];
-
-  return {
-    // clear: function() {
-    //   alerts = [];
-    // },
-    add: function(type, msg) {
-      alerts = [];
-      alerts.push({type: type, msg: msg});
-    },
-    get: function() {
-      return alerts;
-    },
-    remove: function(idx) {
-      alerts.splice(idx, 1);
     }
   }
 }])

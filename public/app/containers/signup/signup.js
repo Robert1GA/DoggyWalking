@@ -5,9 +5,8 @@ angular.module('DoggyApp')
   controllerAs: 'signupComp'
 });
 
-function SignupCompCtrl($scope, $state, UserService, Alerts) {
+function SignupCompCtrl($scope, $state, UserService) {
   signupComp = this;
-  Alerts.add('success', ' ');  // Clears any previous alerts on load
   signupComp.user = {
     name: '',
     phone: '',
@@ -25,15 +24,13 @@ function SignupCompCtrl($scope, $state, UserService, Alerts) {
 
     UserService.createAccount(params).then(function(user) {
       if (user === false) {
-        Alerts.add('danger', 'Error. See console');
         console.log('user create error');
       } else {
         // console.log('got user:', signupComp.user);
-        Alerts.add('success', 'Successful! Now login with new username/password.');
         $state.go('home');
       };
     });
   };
 }
 
-SignupCompCtrl.$inject = ['$scope', '$state', 'UserService', 'Alerts'];
+SignupCompCtrl.$inject = ['$scope', '$state', 'UserService'];

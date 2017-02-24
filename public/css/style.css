@@ -257,3 +257,7 @@ textarea.span3,
 	margin-left: 5px;
 
 }
+
+.img-circle {
+    border-radius: 50%;
+}
