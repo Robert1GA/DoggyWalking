@@ -8,16 +8,14 @@
     <title>Doggy Walking</title>
     <base href="/">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="/img/paw2.jpg">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/angular-material.min.css">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="/css/style2.css">
+    <!-- <link rel="stylesheet" href="/css/style2.css"> -->
     <link rel="stylesheet" href="/css/style.css">
-
-
 
     <!-- FONTS -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
@@ -35,12 +33,13 @@
     <script src="app/app.js"></script>
     <script src="app/containers/home/home.js"></script>
     <script src="app/containers/appointment/appointment.js"></script>
-    <script src="app/containers/schedule/schedule.js"></script>
+    <script src="app/containers/book/book.js"></script>
     <script src="app/controllers/navbar.js"></script>
     <script src="app/containers/signup/signup.js"></script>
     <script src="app/containers/login/login.js"></script>
     <script src="app/containers/admin/admin.js"></script>
     <script src="app/services/services.js"></script>
+    <script src="js/main.js"></script>
 
   </head>
   <body ng-app="DoggyApp">
@@ -55,10 +54,21 @@
         <span flex></span>
       </div>
     </md-toolbar> -->
-    <div class="view-container">
-        <div ui-view></div>
-      </div>
 
+    <div class="view-container">
+      <div ui-view></div>
+    </div>
+    <div class="footer footer-container">
+      <div ng-include="'app/containers/navbar/navfooter.html'"></div>
+    </div>
+    <!-- <div id="copyright">
+    	<div class="container">
+    		<p>&copy; 2017 Doggy Walking | All Rights Reserved</p>
+        <p>
+          <a href="https://github.com/Robert1GA/DoggyWalking"><i class="fa fa-github fa-2x" aria-hidden="true"> </i></a>
+    		</p>
+    	</div>
+    </div> -->
     </body>
   <script type="text/javascript" src="js/plugins/angular-animate.min.js"></script>
   <script type="text/javascript" src="js/plugins/angular-aria.min.js"></script>
@@ -66,7 +76,7 @@
   <script type="text/javascript" src="js/plugins/lodash.js"></script>
   <script type="text/javascript" src="js/plugins/moment.js"></script>
   <!--from example -->
-  <script src="js/plugins/example/jquery-1.8.2.js"></script>
-  <script src="js/plugins/example/bootstrap.js"></script>
+  <!-- <script src="js/plugins/example/jquery-1.8.2.js"></script> -->
+  <!-- <script src="js/plugins/example/bootstrap.js"></script> -->
 
 </html>

@@ -32,6 +32,14 @@ angular.module('DoggyApp')
         console.log(params);
       })
     },
+    getUserData: function() {
+      var URL = '/api/users/' + Auth.currentUser().id;
+      var req = {
+        url: URL,
+        method: 'GET'
+      }
+      return $http(req);
+    },
     deleteUser: function() {
       var URL = '/api/users/' + Auth.currentUser().id;
       var req = {

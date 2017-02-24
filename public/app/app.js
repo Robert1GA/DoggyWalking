@@ -25,9 +25,9 @@ angular.module('DoggyApp',['ui.router', 'ngResource', 'ngMaterial'])
   //   // url: '/appointment',
   //   component: 'appointmentComp'
   // })
-  .state('schedule', {
-    url: '/schedule',
-    component: 'scheduleComp'
+  .state('book', {
+    url: '/book',
+    component: 'bookComp'
   })
   .state('admin', {
     url: '/admin',
@@ -40,12 +40,3 @@ angular.module('DoggyApp',['ui.router', 'ngResource', 'ngMaterial'])
 
   }
 ])
-// .run(function($transitions) {
-//   $transitions.onStart({ to: 'profile' }, function(trans) {
-//     var auth = trans.injector().get('Auth')
-//     if (!auth.isLoggedIn()) {
-//       // User isn't authenticated. Redirect to a new Target State
-//       return trans.router.stateService.target('signup');
-//     }
-//   });
-// });
