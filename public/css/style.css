@@ -396,7 +396,7 @@ textarea.span3,
 }
 
 #page-title {
-	background: url(../img/bg-grey2.png);
+	background: url('../img/bg-grey2.png');
 	display: block;
 	margin-bottom: 25px;
 	position: relative;
