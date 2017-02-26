@@ -21,10 +21,6 @@ angular.module('DoggyApp',['ui.router', 'ngResource', 'ngMaterial'])
     url: '/signup',
     component: 'signupComp'
   })
-  // .state('appointment', {
-  //   // url: '/appointment',
-  //   component: 'appointmentComp'
-  // })
   .state('book', {
     url: '/book',
     component: 'bookComp'
